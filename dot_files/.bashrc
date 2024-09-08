@@ -19,7 +19,7 @@ PS1='\[\033[36m\]\l\[\033[35m\] => \[\033[34m\]\u\[\033[32m\]@\[\033[36m\]\h \[\
 
 ## Aliases for opening specific dot files quicker
 
-alias bashrc='micro ~/.bashrc'
+alias bashrc='geany ~/.bashrc'
 
 ## List aliases using LSD aka LS(Deluxe)
 
@@ -50,3 +50,4 @@ alias macs='/usr/bin/emacs --daemon &'
 
 export MICRO_TRUECOLOR=1
 export PATH="$HOME/.config/emacs/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
