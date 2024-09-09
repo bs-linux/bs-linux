@@ -9,7 +9,7 @@
 
 #
 ## Run FastFetch of course!
-fastfetch
+neofetch
 
 ## Not So Fancy Shmancy Bash Prompt
 
