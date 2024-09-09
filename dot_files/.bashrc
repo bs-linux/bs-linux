@@ -11,6 +11,8 @@
 ## Run FastFetch of course!
 neofetch
 
+testing
+
 ## Not So Fancy Shmancy Bash Prompt
 
 PS1='\[\033[36m\]\l\[\033[35m\] => \[\033[34m\]\u\[\033[32m\]@\[\033[36m\]\h \[\033[34m\]\w \[\033[37m\]\$ '
