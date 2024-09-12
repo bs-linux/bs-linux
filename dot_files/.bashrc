@@ -19,7 +19,7 @@ PS1='\[\033[36m\]\l\[\033[35m\] => \[\033[34m\]\u\[\033[32m\]@\[\033[36m\]\h \[\
 
 ## Aliases for opening specific dot files quicker
 
-alias bashrc='geany ~/.bashrc'
+alias bashrc='micro ~/.bashrc'
 
 ## List aliases using LSD aka LS(Deluxe)
 
@@ -43,7 +43,7 @@ alias rebash='source .bashrc'
 
 ## Aliases for opening apps using "default" commands
 
-alias vim='nvim'
+## alias vim='nvim'
 alias macs='/usr/bin/emacs --daemon &'
 
 ## Giving Micro the best color scheme available! Dracula!
