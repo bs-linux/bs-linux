@@ -1,14 +1,19 @@
-##      ____ _____   __    _
-#     / __ ) ___/  / /   (_)___  __  ___  __
-#    / __  \__ \  / /   / / __ \/ / / / |/_/
-#   / /_/ /__/ / / /___/ / / / / /_/ />  <
-#  /_____/____(_)_____/_/_/ /_/\__,_/_/|_|
+# 
+#   @===============================================================@
+#   |     __                 ___                                    |
+#   |    /\ \               /\_ \    __                             |
+#   |    \ \ \____    ____  \//\ \  /\_\    ___   __  __  __  _     |
+#   |     \ \ '__`\  /',__\   \ \ \ \/\ \ /' _ `\/\ \/\ \/\ \/'\    |
+#   |      \ \ \L\ \/\__, `\__ \_\ \_\ \ \/\ \/\ \ \ \_\ \/>  </    |
+#   |       \ \_,__/\/\____/\_\/\____\\ \_\ \_\ \_\ \____//\_/\_\   |
+#   |        \/___/  \/___/\/_/\/____/ \/_/\/_/\/_/\/___/ \//\/_/   | 
+#   |                                                               |
+#   @===============================================================@                                                     
 #
-#   Author: Brian Scott
-#   Basic .bashrc script
-
 #
-## Run FastFetch of course!
+#
+#
+## Run Neofetch of course!
 neofetch
 
 ## Not So Fancy Shmancy Bash Prompt
@@ -30,7 +35,10 @@ alias lt='lsd --tree'
 ## Distro aliases (eg: Install, Update, etc)
 alias install='sudo nala update; sudo nala install'
 alias update='sudo nala update; sudo nala upgrade -y; sudo nala autoremove; sudo nala clean'
+
+## Git aliases
 alias gc='sudo git clone'
+alias gitbs='cd ~/git/bs-linux'
 
 ## Terminal aliases for making flying around the terminal easier and quicker
 
@@ -45,9 +53,11 @@ alias rebash='source .bashrc'
 
 ## alias vim='nvim'
 alias macs='/usr/bin/emacs --daemon &'
+alias ts='sudo timeshift-launcher'
 
 ## Giving Micro the best color scheme available! Dracula!
 
 export MICRO_TRUECOLOR=1
 export PATH="$HOME/.config/emacs/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
