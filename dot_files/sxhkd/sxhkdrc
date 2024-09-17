@@ -16,7 +16,7 @@ super + p
 	rofi -show calc -modi calc -no-show-match -no-sort
 
 super + f
-	firefox.real
+	firefox.sh
 
 super + e
 	pcmanfm

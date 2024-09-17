@@ -33,8 +33,8 @@ alias la='lsd -la'
 alias lt='lsd --tree'
 
 ## Distro aliases (eg: Install, Update, etc)
-alias install='sudo nala update; sudo nala install'
-alias update='sudo nala update; sudo nala upgrade -y; sudo nala autoremove; sudo nala clean'
+#alias install='sudo nala update; sudo nala install'
+#alias update='sudo nala update; sudo nala upgrade -y; sudo nala autoremove; sudo nala clean'
 
 ## Git aliases
 alias gc='sudo git clone'
