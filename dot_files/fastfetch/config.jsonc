@@ -3,10 +3,10 @@
   "logo": {
       "type": "kitty",
       "source": "~/Pictures/CachyOS_Logo.png",
-      "width": 22,
-//      "height": 10,
+      "width": 23,
+//      "height": 10,      #commenting the height line tells the image to retain its aspect ratio
       "padding": {
-	  "top": 1, 
+	  "top": 2, 
 	  "left": 3,
 	  "right": 3
       }
