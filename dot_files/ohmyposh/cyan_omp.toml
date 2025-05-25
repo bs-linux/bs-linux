@@ -1,0 +1,93 @@
+#:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+version = 3
+final_space = true
+console_title_template = '{{ .Shell }} in {{ .Folder }}'
+
+[palette]
+    os = '#032124'
+    caribbean = '#09636B'
+    darkcyan = '#0E94A0'
+    cyan = '#12C0CF'
+    lavender = '#C680F5'
+    white = '#FFFFFF'
+
+[[blocks]]
+    type = 'prompt'
+    alignment = 'left'
+    newline = true
+
+    [[blocks.segments]]
+	type = 'os'
+	style = 'diamond'
+	leading_diamond = '╭─'
+	trailing_diamond = ''
+	background = 'p:cyan'
+	foreground = 'p:white'
+	template = ' {{ .Icon }} {{ .UserName }}'
+
+    [[blocks.segments]]
+	type = 'path'
+	style = 'plain'
+	background = 'p:transparent'
+	foreground = 'p:cyan'
+	template = '   {{ .Path }} '
+
+	[blocks.segments.properties]
+	    folder_separator_icon = ''
+	    home_icon = '~'
+	    style = 'agnoster_full'
+
+    [[blocks.segments]]
+	type = 'git'
+	style = 'plain'
+	foreground = 'p:lavender'
+	background = 'transparent'
+	template = ' 󰊤 {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
+	include_folders = [
+	    '/home/bslinux/.git/.*'
+	]
+
+	[blocks.segments.properties]
+	    branch_icon = ''
+	    commit_icon = '@'
+	    fetch_status = true
+
+[[blocks]]
+    type = 'rprompt'
+    overflow = 'hidden'
+
+    [[blocks.segments]]
+	type = 'executiontime'
+	style = 'plain'
+	foreground = 'p:cyan'
+	background = 'transparent'
+	template = '{{ .FormattedMs }}'
+
+    [blocks.segments.properties]
+	threshold = 5000
+
+[[blocks]]
+    type = 'prompt'
+    alignment = 'left'
+    newline = true
+
+    [[blocks.segments]]
+	type = 'text'
+	style = 'plain'
+	template = '╰─'
+	foreground = 'p:cyan'
+
+    [[blocks.segments]]
+	type = 'text'
+	style = 'plain'
+	template = ''
+	foreground = 'p:cyan'
+
+[transient_prompt]
+    foreground = "p:cyan"
+    background = "transparent"
+    template = ' '
+
+	
+
