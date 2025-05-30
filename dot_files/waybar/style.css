@@ -1,0 +1,175 @@
+* {
+    font-family: "JetBrains Mono Nerd Font";
+    font-size: 15px;
+    font-weight: 700;
+    border: none;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#custom-shutter {
+    background: #161415;
+    margin-top: 5px;
+    margin-left: 5px;
+    padding-left: 5px;
+    padding-right: 10px;
+    border-radius: 5px;
+    transition: none;
+    color: #05E5FA;
+    opacity: 0.8;
+    font-size: 20px;
+}
+
+#custom-updates {
+    background: #161415;
+    opacity: 0.8;
+    color: #05E5FA;
+    margin-top: 5px;
+    margin-left: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+
+#window {
+    margin-top: 5px;
+    margin-left: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    transition: none;
+    color: #05E5FA;
+    background: #161415;
+    opacity: 0.8;
+}
+
+#workspaces {
+    margin-top: 5px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    background: #161415;
+    opacity: 0.8;
+}
+
+#workspaces button {
+    transition: none;
+    color: #fff;
+    background: transparent;
+    border-radius: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#workspaces button.visible {
+    transition: none;
+    color: #078B90;
+}
+
+#workspaces button.active {
+    transition: none;
+    color: #05E5FA;
+    border-top: solid 2px;
+    border-bottom: solid 2px;
+}
+
+#workspaces button:hover {
+    color: #59C46D;
+}
+#custom-launcher {
+    background: #161415;
+    margin-top: 5px;
+    margin-left: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    transition: none;
+    color: #05E5FA;
+    background: #161415;
+    opacity: 0.8;
+    font-size: 20px;
+}
+#clock {
+    background: #161415;
+    opacity: 0.8;
+    color: #05E5FA;
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 7px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#cpu {
+    background: #161415;
+    opacity: 0.8;
+    color: #05E5FA;
+    margin-top: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+#memory {
+    background: #161415;
+    opacity: 0.8;
+    color: #05E5FA;
+    margin-top: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+#disk {
+    background: #161415;
+    opacity: 0.8;
+    color: #05E5FA;
+    margin-top: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+#network {
+    background: #161415;
+    opacity: 0.8;
+    color: #05E5FA;
+    margin-top: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+network#speed {
+    background: #161415;
+    opacity: 0.8;
+    color: #05E5FA;
+    margin-top: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+#wireplumber {
+    background: #161415;
+    opacity: 0.8;
+    color: #05E5FA;
+    margin-top: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+#custom-power {
+    background: #161415;
+    opacity: 0.8;
+    color: #05E5FA;
+    margin-top: 5px;
+    margin-right: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}

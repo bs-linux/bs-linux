@@ -1,0 +1,51 @@
+* {
+	background-image: none;
+	box-shadow: none;
+	font-family: JetBrains Mono Nerd Font;
+	font-weight: 800;
+}
+
+window {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+button {
+        border-radius: 50px;
+        color: #FFFFFF;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 35%;
+	margin: 10px;
+	transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+button:hover {
+	border-color: #05E5FA;
+	border-style: solid;
+	border-width: 2px;
+	outline-style: none;
+}
+
+#lock {
+        background-image: image(url("/home/bslinux/.config/wlogout/icons/cyan_lock.png"), url("/home/bslinux/.config/wlogout/icons/cyan_lock.png"));
+}
+
+#logout {
+	background-image: image(url("/home/bslinux/.config/wlogout/icons/cyan_logout.png"), url("/home/bslinux/.config/wlogout/icons/cyan_logout.png"));
+}
+
+#suspend {
+	background-image: image(url("/home/bslinux/.config/wlogout/icons/cyan_suspend.png"), url("/home/bslinux/.config/wlogout/icons/cyan_suspend.png"));
+}
+
+#hibernate {
+	background-image: image(url("/home/bslinux/.config/wlogout/icons/cyan_hibernate.png"), url("/home/bslinux/.config/wlogout/icons/cyan_hibernate.png"));
+}
+
+#shutdown {
+	background-image: image(url("/home/bslinux/.config/wlogout/icons/cyan_shutdown_black.png"), url("/home/bslinux/.config/wlogout/icons/cyan_shutdown_black.png"));
+}
+
+#reboot {
+	background-image: image(url("/home/bslinux/.config/wlogout/icons/cyan_reboot.png"), url("/home/bslinux/.config/wlogout/icons/cyan_reboot.png"));
+}
