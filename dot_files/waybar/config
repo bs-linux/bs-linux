@@ -1,0 +1,147 @@
+// -*- mode: jsonc -*-
+
+{
+    // -- General Config
+    "layer": "top",          // Waybar at top
+    "height": 25,           // Waybar height
+//    "spacing": 3, 	    // Space between modules
+
+    // -- Set Module Order
+    "modules-left": [
+	"custom/launcher",
+	"custom/shutter",
+	"custom/updates",
+	"hyprland/window"
+    ],
+    "modules-center": [
+	"hyprland/workspaces"
+    ],
+    "modules-right": [
+	"clock",
+	"cpu",
+	"memory",
+	"disk",
+	"network",
+	"network#speed",
+	"wireplumber",
+	"custom/power"
+    ],
+
+    //Modules Configuration
+    "custom/launcher":{
+        "format": " ",
+        "on-click": "rofi -show drun",
+        "on-click-right": "killall rofi"
+    },
+    "custom/shutter": {
+	"format": "  ",
+	"on-click": "~/.config/hypr/scripts/screenshot_area",
+	"on-click-right": "shutter -aCe --output=%m-%d-%y-%T.jpg && notify-send 'Active Window Screenshot Captured' ",
+	"on-click-middle": "shutter -fCe --output=%m-%d-%y-%T.jpg && notify-send 'Full Screenshot Captured' "
+    },
+    "custom/updates":{
+        "format": "{} Update(s)",
+        "exec": "checkupdates | wc -l",
+        "exec-if": "[[ $(checkupdates | wc -l) != 0 ]]",
+        "interval": 1800,
+        "on-click": "ghostty -e paru -Syu && notify-send 'The system has been updated' "
+    },
+    "hyprland/window": {
+	"format": "{}",
+	"rewrite": {
+	    "(.*) Mozilla Firefox": " 󰈹 ",
+	    "nvim": "  "
+	},
+	"max-length": "50"
+    },
+    "hyprland/workspaces": {
+	"disable-scroll": true,
+	"all-outputs": true,
+	"format": "{name}",
+	"persistent-workspaces": {
+	    "1": [],
+	    "2": [],
+	    "3": [],
+	    "4": [],
+	    "5": []
+	},
+    },
+    "cpu": {
+	"format": "   {usage}% @ {max_frequency}MHz",
+	"tooltip": true,
+	"on-click": "ghostty -e btop"
+    },
+    "memory": {
+	"interval": 30,
+	"format": "  {}%",
+	"tooltip": true,
+	"tooltip-format": "Using {used}GiB of {total}" 
+    },
+    "disk": {
+	"format": "  {}%",
+	"tooltip": true,
+	"tooltip-format": "{used} used of {total}"
+    },
+    "network": {
+	"format": "{ifname}",
+	"format-ethernet": "󰈀 ",
+	"format-disconnected": "󰌙 ",
+	"tooltip-format": "{ipaddr} 󰦘 {bandwidthUpBits} 󰦗 {bandwidthDownBits}",
+	"tooltip-format-ethernet": "{ifname} 󰈁 \n󰦘  {bandwidthUpBytes} 󰦗  {bandwidthDownBytes}",
+	"tooltip-format-disconnected": "󰌙 Disconnected",
+	"max-length": 30,
+	"format-icons": [
+	    "󰈀", "󰈂", "󰦘", "󰦗" 
+	],
+	"on-click-right": "ghostty -e nmtui"
+	
+    },
+    "network#speed": {
+	"interval": 1,
+	"format": "{ifname}",
+	"format-ethernet": "󰦘  {bandwidthUpBits} 󰦗  {bandwidthDownBits}",
+	"format-disconnected": "󰌙 ",
+	"tooltip-format": "ipaddr",
+	"tooltip-format-ethernet": "{ifname} 󰌘 ",
+	"tooltip-format-disconnected": "󰌙 Disconnected",
+	"min-length": 24,
+	"max-length": 24,
+	"format-icons": [
+	    "󰈀", "󰈂", "󰦘", "󰦗" 
+	],
+    },
+    "wireplumber": {
+	"format": "{icon} {volume}",
+	"format-muted": "󰖁 ",
+	"scroll-step": 1.0,
+	"format-icons": [
+	    "󰕿 ", "󰖀 ", "󰕾 "
+	],
+	"on-click": "pwvucontrol"
+    },
+    "clock": {
+	"interval": 60,
+	"format": "   {:%I:%M}",
+	"tooltip": true,
+	"tooltip-format": "<tt><small>{calendar}</small></tt>",
+	"calendar": {
+	    "mode"          : "year",
+            "mode-mon-col"  : 3,
+            "weeks-pos"     : "right",
+            "on-scroll"     : 1,
+            "format": {
+                    "months":     "<span color='#ffead3'><b>{}</b></span>",
+                    "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                    "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                    "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                    "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+             }
+	}
+    },
+    "custom/power": {
+        "tooltip": true,
+        "on-click": "wlogout &",
+        "format": " ",
+        "tooltip-format": "Power Menu"
+    },
+}

@@ -1,0 +1,30 @@
+{
+    "label" : "lock",
+    "action" : "/home/bslinux/.config/wlogout/scripts/wscript lock",
+    "keybind" : "l"
+}
+{
+    "label" : "hibernate",
+    "action" : "/home/bslinux/.config/wlogout/scripts/wscript hibernate",
+    "keybind" : "h"
+}
+{
+    "label" : "logout",
+    "action" : "/home/bslinux/.config/wlogout/scripts/wscript logout",
+    "keybind" : "e"
+}
+{
+    "label" : "shutdown",
+    "action" : "/home/bslinux/.config/wlogout/scripts/wscript shutdown",
+    "keybind" : "s"
+}
+{
+    "label" : "suspend",
+    "action" : "/home/bslinux/.config/wlogout/scripts/wscript suspend",
+    "keybind" : "u"
+}
+{
+    "label" : "reboot",
+    "action" : "/home/bslinux/.config/wlogout/scripts/wscript reboot",
+    "keybind" : "r"
+}
