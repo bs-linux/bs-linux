@@ -9,7 +9,7 @@
     // -- Set Module Order
     "modules-left": [
 	"custom/launcher",
-	"custom/shutter",
+	"custom/screenshot",
 	"custom/updates",
 	"hyprland/window"
     ],
@@ -33,11 +33,11 @@
         "on-click": "rofi -show drun",
         "on-click-right": "killall rofi"
     },
-    "custom/shutter": {
+    "custom/screenshot": {
 	"format": "  ",
-	"on-click": "~/.config/hypr/scripts/screenshot_area",
-	"on-click-right": "shutter -aCe --output=%m-%d-%y-%T.jpg && notify-send 'Active Window Screenshot Captured' ",
-	"on-click-middle": "shutter -fCe --output=%m-%d-%y-%T.jpg && notify-send 'Full Screenshot Captured' "
+	"on-click": "zsh $XDG_CONFIG_HOME/waybar/screenshot.sh",
+	"on-click-right": "grim -o DP-3 - | satty -f -",
+	"on-click-middle": "grim -o DP-3 - | wl-copy && notify-send 'Main Monitor Screenshot Copied' "
     },
     "custom/updates":{
         "format": "{} Update(s)",
