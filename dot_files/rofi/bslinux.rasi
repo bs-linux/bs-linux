@@ -23,7 +23,7 @@
 	spacing: 0;
 	background-color: transparent;
 	font-family: "JetBrains Mono Nerd Font";
-
+	color: @base07;
 }
 
 window {
