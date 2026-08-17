@@ -1,15 +1,25 @@
-require('config.options')
-require('config.keybinds')
-require('config.lazy')
-require('telescope').setup {
-  extensions = {
-    fzf = {
-      fuzzy = true,                    -- false will only do exact matching
-      override_generic_sorter = true,  -- override the generic sorter
-      override_file_sorter = true,     -- override the file sorter
-      case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
-                                       -- the default case_mode is "smart_case"
-    }
-  }
-}
-require('telescope').load_extension('fzf')
+-- Neovim 0.12 config for editing config files (lua, yaml, toml, json, css, python, sh…).
+--
+--   lua/config/options.lua   options, colorscheme, leader
+--   lua/config/keymaps.lua   non-plugin keymaps
+--   lua/config/autocmds.lua  formatoptions, yank highlight, treesitter start
+--   lua/plugins/init.lua     vim.pack.add() + loads lua/plugins/<name>.lua
+--   lua/config/lsp.lua       diagnostics, LspAttach keymaps, blink capabilities
+--   lsp/<server>.lua         per-server configs (vim.lsp.config convention)
+
+require("config.options")
+require("config.keymaps")
+require("config.autocmds")
+require("plugins") -- must precede config.lsp (blink.cmp capabilities)
+require("config.lsp")
+
+vim.lsp.enable({
+  "lua_ls",
+  "jsonls",
+  "yamlls",
+  "taplo",
+  "basedpyright",
+  "ruff",
+  "bashls",
+  "cssls",
+})
